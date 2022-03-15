@@ -1,8 +1,15 @@
 import Head from 'next/head'
 import Image from 'next/image'
 import styles from '../styles/Home.module.css'
+import Link from 'next/link'
+import { useRouter } from 'next/router'
 
 export default function Home() {
+  const router=useRouter();
+  const handleclick=()=>{
+    console.log("Navigate to other page when this function calls")
+    router.push('/product')
+  }
   return (
     <div className={styles.container}>
       <Head>
@@ -15,7 +22,8 @@ export default function Home() {
         <h1 className={styles.title}>
           Welcome to <a href="https://nextjs.org">Next.js!</a>
         </h1>
-
+        <Link href="/product"><a>Product</a></Link>
+        <button onClick={handleclick}>Place product</button>
         <p className={styles.description}>
           Get started by editing{' '}
           <code className={styles.code}>pages/index.js</code>
