@@ -22,7 +22,9 @@ export default function Home() {
         <h1 className={styles.title}>
           Welcome to <a href="https://nextjs.org">Next.js!</a>
         </h1>
-        <Link href="/product"><a>Product</a></Link>
+        <Link href="/users"><a>User</a></Link>
+        <br/>
+        <Link href="/posts"><a>Posts</a></Link>
         <button onClick={handleclick}>Place product</button>
         <p className={styles.description}>
           Get started by editing{' '}
